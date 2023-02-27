@@ -21,16 +21,16 @@ services:
       dockerfile: ./docker-config/alpine-php-dev-overlay/Dockerfile
     depends_on:
       - "db"
-      - "redis"
-      - "solr"
+#      - "redis"
+#      - "solr"
     env_file:
       *env
     expose:
       - "9000"
     links:
       - db
-      - redis
-      - solr
+#      - redis
+#      - solr
     volumes:
       - ./app:/var/www/app:consistent
 #      - ./app/vendor:/var/www/app/vendor:delegated
@@ -54,21 +54,21 @@ services:
       - db-data:/var/lib/mysql
       - ./data:/data
   # redis - key/value database for caching & php sessions
-  redis:
-    build:
-      context: .
-      dockerfile: ./docker-config/redis/Dockerfile
-    expose:
-      - "6379"
+  #  redis:
+  #    build:
+  #    context: .
+  #    dockerfile: ./docker-config/redis/Dockerfile
+  #  expose:
+  #     - "6379"
 
-  solr:
-    build:
-      context: .
-      dockerfile: ./docker-config/solr/Dockerfile
-    expose:
-     - "8901"
-    ports:
-     - "8981:8983"
+#  solr:
+#    build:
+#      context: .
+#      dockerfile: ./docker-config/solr/Dockerfile
+#    expose:
+#     - "8901"
+#    ports:
+#     - "8981:8983"
 
 volumes:
   db-data:
