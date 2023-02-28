@@ -12,6 +12,6 @@ interface ProductInterface
      *
      * @return Product
      */
-    public function getProductById(string $id): Product;
+
 
 }
