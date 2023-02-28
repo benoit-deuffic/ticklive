@@ -1,6 +1,2 @@
-app/bin/
-app/config/
-app/public/
-app/src/
-app/symfony.lock
-app/
+app/src/Infrastructure/Symfony
+.idea
