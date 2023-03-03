@@ -36,6 +36,6 @@ doctrine_database_create:
 postgre_import:
 	docker-compose exec db  sh -c 'psql -h db -U project project < /data/pgdump.sql'
 
-install: build composer_install composer_update up doctrine_database_create postgre_import
+install: build composer_install composer_update doctrine_schema_create  postgre_import
 
 re-install: stop down clean compose install

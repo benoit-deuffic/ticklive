@@ -16,6 +16,6 @@ if (!\class_exists(App_KernelLocalDebugContainer::class, false)) {
 
 return new \ContainerPFRlx0z\App_KernelLocalDebugContainer([
     'container.build_hash' => 'PFRlx0z',
-    'container.build_id' => '5da8ecc9',
-    'container.build_time' => 1677856130,
+    'container.build_id' => '40b3f6ef',
+    'container.build_time' => 1677856739,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerPFRlx0z');
