@@ -26,3 +26,19 @@ services:
 
     App\Infrastructure\Http\:
         resource: '../src/Infrastructure/Http'
+
+    infra_persister_adapter:
+        class: App\Infrastructure\Adapter\DBAL\ProductPersister
+
+    _instanceof:
+        App\Domain\Bus\Command\CommandHandler:
+            tags: ['internal.command_handler']
+        App\Domain\Bus\Query\QueryHandler:
+            tags: ['internal.query_handler']
+### Buses
+    App\Domain\Bus\Command\CommandBus:
+        class: App\Infrastructure\Bus\Command\InMemoryCommandBus
+        arguments: [!tagged internal.command_handler]
+    App\Domain\Bus\Query\QueryBus:
+        class: App\Infrastructure\Bus\Query\InMemoryQueryBus
+        arguments: [!tagged internal.query_handler]

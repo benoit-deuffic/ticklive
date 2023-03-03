@@ -1,9 +1,9 @@
-.DEFAULT_GOAL := compose
+.DEFAULT_GOAL := build
 
 clean:
 	docker system prune -a -f
 
-compose:
+build:
 	docker-compose up --build -d
 
 up:

@@ -8,10 +8,16 @@ use Doctrine\ORM\Mapping\Entity;
 interface ProductInterface
 {
     /**
-     * @param string $title
+     * @param Entity $entity
      *
-     * @return Product
+     * @return void
      */
+    public function save(Product $entity, bool $flush = false): array ;
 
-
+    /**
+     * @param Entity $entity
+     *
+     * @return void
+     */
+    public function remove(Product $entity, bool $flush = false): array ;
 }

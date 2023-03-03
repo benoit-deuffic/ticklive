@@ -3,23 +3,28 @@ FROM composer:latest as composer
 FROM bdeuffic/alpine-php8-dev-base
 
 # Install packages
+
+
 RUN apk update \
     && \
-    # apt Debian packages
     apk add \
         nano \
         postgresql-dev \
+        postgresql-client \
         libjpeg-turbo-utils \
         advancecomp \
         optipng \
         bash \
         util-linux \
         openssh \
-        mysql \
+        mysql-client \
     && \
     # Install PHP extensions
     docker-php-ext-install \
         pdo_mysql \
+        pdo_pgsql \
+    && \
+    docker-php-ext-enable \
         pdo_pgsql \
     && \
     # Install Composer
@@ -29,7 +34,7 @@ COPY --from=composer  /usr/bin/composer /usr/local/bin/composer
 
 #RUN composer global require hirak/prestissimo --no-plugins --no-scripts
 
-ENV PATH=/var/www/app/vendor/bin:$PATH
+ENV PATH=/var/www/app/Infrastructure/Symfony/vendor/bin:$PATH
 ENV COMPOSER_MEMORY_LIMIT=-1
 
 
