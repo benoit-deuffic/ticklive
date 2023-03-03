@@ -16,10 +16,8 @@
    <br />
   <br />
 Concept d'architecture hexagonale:
-<h1 align="center">
-  🐘🎯 Test technique: Architecture Hexagonale et Exemple de CQRS en Symfony
-</h1>
-</p>
+
+<img src="app/public/assets/archi_hexa_06-1024x526.png" alt="hexagon">
 
 ## Préambule
 
@@ -40,9 +38,11 @@ Le projet est écrit sur [Symfony][1] 6
 
 1. docker
 2. docker-compose
+2. git
 
 ### 🛠 Installation du projet
 
+`git clone https://github.com/benoit-deuffic/ticklive.git ticklive`
 `make install`
 
 Les crédentials de la base de données sont `project:secret`
