@@ -46,11 +46,9 @@ Le projet est écrit sur [Symfony][1] 6
 `make install`
 
 Les crédentials de la base de données sont `project:secret`
-### 🔥 Application execution
+### 🔥 Exécution de l'application
 
-1. Install the backend dependencies: `composer install`.
-3. Create database & tables with `php bin/console d:d:c` then `php bin/console make:migration`
-   and `php bin/console migration:migrate` or force with `php bin/console d:s:u -f`
+`make up`
 
 ### ✅ Tester
 
