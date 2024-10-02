@@ -4,7 +4,7 @@
 </p>
 
 <h1 align="center">
-  🐘🎯 Test technique: Architecture Hexagonale et Exemple de CQRS en Symfony
+  🐘🎯 PoC: Architecture Hexagonale et Exemple de CQRS en Symfony
 </h1>
 
 <p align="center">
@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
- Exemple d'architecture Hexa avec une implémentation de CQRS
+ Exemple d'architecture Hexagonale avec une implémentation de CQRS
    <br />
   <br />
 Concept d'architecture hexagonale:
